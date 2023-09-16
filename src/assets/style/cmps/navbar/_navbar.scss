@@ -1,0 +1,82 @@
+.navbar {
+    color: $ui-brand-color;
+    font-family: 'Cereal-Medium';
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    height: $navabar-height;
+    background: transparent;
+    position: relative;
+    height: 80px;
+    z-index: 5;
+
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: 30px 1fr 267px;
+        gap: 0.5rem;
+    }
+
+    button {
+        background: transparent;
+        border: none;
+    }
+
+    .user-section {
+        justify-self: flex-end;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+
+        .airbnb-cta {
+            background: transparent;
+            border: 0;
+            cursor: pointer;
+            margin: 0;
+            text-align: inherit;
+            padding: 12px;
+            border-radius: 22px;
+
+            &:hover {
+                background: #f7f7f7;
+            }
+        }
+
+        .lang {
+            margin-right: 5px;
+            padding: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 1.2rem;
+
+            &:hover {
+                background: #f7f7f7;
+            }
+        }
+    }
+
+    .user-open-modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #dddddd;
+        border-radius: 21px;
+        height: 40px;
+        padding: 5px 5px 5px 12px;
+
+        >:first-child {
+            width: 16px;
+            height: 16px;
+        }
+
+        >:last-child {
+            width: 30px;
+            height: 30px;
+            margin-left: 12px;
+        }
+    }
+}
+
+.border {
+    border-bottom: 2px solid #f0f0f0;
+}

@@ -1,0 +1,9 @@
+.logo {
+    cursor: pointer;
+}
+
+@media (min-width: 1130px) {
+    .logo {
+        content: url('../../../img/logo/mini-logo.svg');
+    }
+}

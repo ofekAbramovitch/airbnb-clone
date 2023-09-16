@@ -5,7 +5,7 @@ const userProfileSrc = 'https://res.cloudinary.com/ofekabramovitch/image/upload/
 export default function UserSection() {
     return (
         <section className="user-section">
-            <button className="airbnb-cta">Airvbnb your home</button>
+            <button className="airbnb-cta">Airbnb your home</button>
             <button className="lang">
                 <RiGlobalLine fontSize={'19px'} />
             </button>
