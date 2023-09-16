@@ -11,6 +11,8 @@ import { ISearchBy } from "../../interfaces/search-by-interface"
 
 import Navbar from "../../cmps/navbar/navbar"
 import Filters from "./cmps/filters"
+import Stays from "./cmps/stays"
+import NoStaysMsg from "./cmps/no-stays-msg"
 
 const NUM_OF_SKELETONS = 20
 
@@ -82,7 +84,9 @@ export default function Home() {
         <section className="main-layout home no-scroll">
             <Navbar />
             <Filters onFilter={onGetNewStays} filterBy={filterBy} setFiterBy={setFilterBy} />
-            {!isMapOpen && stays.length > 0 && }
+            {!isMapOpen && stays.length > 0 && <Stays stays={stays} getStays={getStays} onStay={onStay} />}
+            {!isMapOpen && stays.length <= 0 && <NoStaysMsg onRemoveFilter={onRemoveFilter} />}
+            
         </section>
     )
 }
