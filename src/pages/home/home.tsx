@@ -14,6 +14,7 @@ import Filters from "./cmps/filters"
 import Stays from "./cmps/stays"
 import NoStaysMsg from "./cmps/no-stays-msg"
 import MapBtn from "./cmps/map-btn"
+import StaysMapListings from "./cmps/stays-map-listings"
 
 const NUM_OF_SKELETONS = 20
 
@@ -88,6 +89,9 @@ export default function Home() {
             {!isMapOpen && stays.length > 0 && <Stays stays={stays} getStays={getStays} onStay={onStay} />}
             {!isMapOpen && stays.length <= 0 && <NoStaysMsg onRemoveFilter={onRemoveFilter} />}
             <MapBtn isMapOpen={isMapOpen} onClickMap={onClickMap} />
+            {isMapOpen && (
+                <StaysMapListings stays={stays.filter(stay => stay.type !== 'skeleton') as IStay[]} onStay={onStay} />
+            )}
         </section>
     )
 }
