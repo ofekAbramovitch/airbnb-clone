@@ -3,7 +3,11 @@ import { useEffect, useState } from "react"
 import { ISearchBy } from "../../../interfaces/search-by-interface"
 
 import { AiOutlineClose } from 'react-icons/ai'
+import { BiSearch } from 'react-icons/bi'
 
+import SearchLocation from "./search-location"
+import SearchDatePicker from "./search-date-picker"
+import SearchGuests from "./search-guests"
 interface Props {
     isSearchOpen: boolean
     onToggleSearch: () => void
@@ -67,6 +71,46 @@ export default function SearchExpandedMobile({ isSearchOpen, onToggleSearch, sea
                 <p className={selectedExperience === 'Experiences' ? 'active' : ''} onClick={() => setSelectedExperience('Experiences')}>
                     Experiences
                 </p>
+            </div>
+            <div className="tabs">
+                {selectedModule !== 'searchLocation' && (
+                    <div className="tab" onClick={ev => setSelectedModuleMiddleware(ev, 'searchLocation')}>
+                        <p className="muted">Where</p>
+                        <p>{searchBy.destination ? searchBy.destination : "I'm flexible"}</p>
+                    </div>
+                )}
+                {selectedModule === 'searchLocation' && (
+                    <SearchLocation isMobile={true}
+                        searchBy={searchBy}
+                        updateSearchBy={updateSearchBy}
+                        handleSelect={handleSelect}
+                    />
+                )}
+                {selectedModule !== 'searchDatePicker' && (
+                    <div className="tab" onClick={ev => setSelectedModuleMiddleware(ev, 'searchDatePicker')}>
+                        <p className="muted">When</p>
+                        <p>{`${searchBy.checkIn.toLocaleDateString()} - ${searchBy.checkOut.toLocaleDateString()}`}</p>
+                    </div>
+                )}
+                {selectedModule === 'searchDatePicker' && (
+                    <SearchDatePicker searchBy={searchBy} updateSearchBy={updateSearchBy} handleSelect={() => { }} />
+                )}
+                {selectedModule !== 'searchGuests' && (
+                    <div className="tab" onClick={ev => setSelectedModuleMiddleware(ev, 'searchGuests')}>
+                        <p className="muted">Who</p>
+                        <p>{guestsCountFormatted()}</p>
+                    </div>
+                )}
+                {selectedModule === 'searchGuests' && (
+                    <SearchGuests handleGuestsCounter={handleGuestsCounter} searchBy={searchBy} />
+                )}
+            </div>
+            <div className="full-bleed footer">
+                <p>Clear all</p>
+                <button onClick={onSearch}>
+                    <BiSearch fontSize={'20px'} />
+                    Search
+                </button>
             </div>
         </div>
     )
