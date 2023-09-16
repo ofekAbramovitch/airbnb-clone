@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Cereal-Book';
+    src: url('../../fonts/cereal/Cereal-Book-2.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Cereal-Medium';
+    src: url('../../fonts/cereal/Cereal-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Cereal-Bold';
+    src: url('../../fonts/cereal/Cereal-Bold.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Cereal-Book', sans-serif;
+}

@@ -1,0 +1,123 @@
+.disable-scrollbar {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+
+    &::-webkit-scrollbar {
+        background: transparent;
+        /* Chrome/Safari/Webkit */
+        width: 0px;
+        height: 0;
+    }
+}
+
+.hide {
+    display: none !important;
+}
+
+// List
+.clean-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+// Text
+.vertical-text {
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+}
+
+.inline-clamp {
+    display: -webkit-box;
+    overflow: hidden;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    line-height: inherit;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.text-bold {
+    font-weight: 400;
+    letter-spacing: -0.1px;
+}
+
+// Inline space
+.space-inline-s {
+    &>*:not(:last-child) {
+        margin-inline-end: 1em;
+    }
+}
+
+.space-inline-m {
+    &>*:not(:last-child) {
+        margin-inline-end: 2em;
+    }
+}
+
+.space-inline-l {
+    &>*:not(:last-child) {
+        margin-inline-end: 3em;
+    }
+}
+
+.flex {
+    display: flex;
+
+    &.column {
+        flex-direction: column;
+    }
+
+    &.flex-center {
+        align-items: center;
+        justify-content: center;
+    }
+
+    &.justify-between {
+        justify-content: space-between;
+    }
+
+    &.justify-center {
+        justify-content: center;
+    }
+
+    &.justify-start {
+        justify-content: flex-start;
+    }
+
+    &.justify-end {
+        justify-content: flex-end;
+    }
+
+    &.align-center {
+        align-items: center;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+body.remove-scrollbar {
+    overflow: hidden;
+    overflow-x: hidden;
+
+    ::-webkit-scrollbar {
+        width: 0;
+        /* Remove scrollbar space */
+        background: transparent;
+        /* Optional: just make scrollbar invisible */
+    }
+}
+
+@media screen and (max-width: $mobile-size) {
+    .mob-hide {
+        display: none !important;
+    }
+}
