@@ -10,6 +10,7 @@ import { IFilterBy } from "../../interfaces/filter-by-interface"
 import { ISearchBy } from "../../interfaces/search-by-interface"
 
 import Navbar from "../../cmps/navbar/navbar"
+import Filters from "./cmps/filters"
 
 const NUM_OF_SKELETONS = 20
 
@@ -80,6 +81,8 @@ export default function Home() {
     return (
         <section className="main-layout home no-scroll">
             <Navbar />
+            <Filters onFilter={onGetNewStays} filterBy={filterBy} setFiterBy={setFilterBy} />
+            {!isMapOpen && stays.length > 0 && }
         </section>
     )
 }
