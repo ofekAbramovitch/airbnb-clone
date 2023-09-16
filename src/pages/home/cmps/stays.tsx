@@ -1,8 +1,7 @@
 import { useRef } from "react"
 import { ISkeletonStay, IStay } from "../../../interfaces/stay-interface"
 import StaySkeleton from "./stay-skeleton"
-
-
+import StayPreview from "./stay-preview"
 interface Props {
     stays: IStay[] | ISkeletonStay[]
     getStays: () => void
@@ -44,7 +43,7 @@ export default function Stays({ stays, getStays, onStay }: Props) {
                         return <StaySkeleton key={stay._id} />
                     }
                 } else {
-                    return
+                    return <StayPreview stay={stay as IStay} key={stay._id} onStay={onStay} />
                 }
             })}
         </div>
