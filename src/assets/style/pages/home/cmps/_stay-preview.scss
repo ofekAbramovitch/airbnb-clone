@@ -1,0 +1,53 @@
+.stay-preview {
+    cursor: pointer;
+
+    &:hover {
+        .carousel-btn {
+            opacity: 1;
+        }
+    }
+
+    .details {
+        color: #717171;
+        font-size: 14px;
+
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .stars {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.3rem;
+            }
+        }
+
+        .address {
+            color: #222222;
+            font-family: 'Cereal-Bold', sans-serif;
+            font-size: 15px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+
+        .price {
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            color: #222222;
+            margin-top: 6px;
+            font-family: 'Cereal-Medium', sans-serif;
+
+            .prefix {
+                color: rgb(34, 34, 34);
+                font-family: 'Cereal-Book', sans-serif;
+                font-size: 14px;
+            }
+        }
+    }
+}

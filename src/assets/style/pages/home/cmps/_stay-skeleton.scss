@@ -1,0 +1,39 @@
+.stay-preview-skeleton {
+    cursor: auto;
+
+    .skeleton-img {
+        background: $skeleton-color;
+    }
+
+    .placeholder {
+        background: $skeleton-color;
+        height: 24px;
+        border-radius: 5px;
+    }
+
+    .details {
+        .address {
+            margin-top: 0.6rem;
+            width: 60%;
+        }
+
+        .stars {
+            width: 20%;
+        }
+
+        .type {
+            margin-top: 0.15rem;
+            width: 45%;
+        }
+
+        .available {
+            width: 30%;
+            margin-top: 0.25rem;
+        }
+
+        .price {
+            margin-top: 0.6rem;
+            width: 28%;
+        }
+    }
+}
