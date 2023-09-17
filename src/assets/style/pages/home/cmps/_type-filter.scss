@@ -1,0 +1,50 @@
+.type-filter {
+    @include modal-inner-padding();
+    border-bottom: 1px solid rgb(235, 235, 235);
+
+    h5 {
+        font-size: 22px;
+        font-family: 'Cereal-Book', sans-serif;
+    }
+
+    &-inputs {
+        margin-top: 24px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        input {
+            cursor: pointer;
+            align-self: flex-start;
+            margin-top: 5px;
+            display: inline-block;
+            border: 1px solid rgb(176, 176, 176);
+            height: 24px !important;
+            width: 24px !important;
+            background: rgb(255, 255, 255);
+            text-align: center;
+            overflow: hidden;
+            vertical-align: top;
+            border-radius: 4px;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 24px 1fr;
+            gap: 16px;
+
+            .input-header {
+                color: $ui-brand-color;
+                font-family: 'Cereal-Book', sans-serif;
+            }
+
+            .desc {
+                font-family: 'Cereal-Book', sans-serif;
+                color: rgb(113, 113, 113);
+                margin-top: 4px;
+                word-break: break-word;
+                font-size: 13px;
+                line-height: 18px;
+            }
+        }
+    }
+}

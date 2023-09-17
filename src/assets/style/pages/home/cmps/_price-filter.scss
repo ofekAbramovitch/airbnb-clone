@@ -1,0 +1,60 @@
+.price-filter {
+    @include modal-inner-padding();
+    border-bottom: 1px solid rgb(235, 235, 235);
+
+    h5 {
+        font-size: 22px;
+        font-family: 'Cereal-Book', sans-serif;
+    }
+
+    p {
+        font-size: 16px;
+        color: $sec-color;
+        font-family: 'Cereal-Book', sans-serif;
+    }
+
+    .inputs {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 16px 1fr;
+        gap: 0.5rem;
+        align-items: center;
+
+        .dash {
+            align-self: center;
+            justify-self: center;
+        }
+
+        label {
+            position: relative;
+
+            p {
+                position: absolute;
+                font-size: 12px;
+                font-family: 'Cereal-Book', sans-serif;
+                color: $text-muted;
+                top: 8px;
+                left: 10px;
+
+                &.currency {
+                    color: $ui-brand-color;
+                    top: unset;
+                    padding-top: 24.2px;
+                    font-size: 14px;
+                    font-family: 'Cereal-Medium', sans-serif;
+                }
+            }
+
+            input {
+                display: block;
+                width: 100%;
+                height: 56px;
+                border-radius: 7px;
+                border: 1px solid #b0b0b0;
+                padding-left: 20px;
+                padding-top: 15px;
+                color: $sec-color;
+            }
+        }
+    }
+}
