@@ -1,0 +1,36 @@
+.counter {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    p {
+        font-size: 16px !important;
+    }
+
+    button {
+        background: transparent;
+        outline: none;
+        border: 1px solid rgb(176, 176, 176);
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            color: rgb(34, 34, 34);
+            border-color: rgb(34, 34, 34);
+            background: rgb(255, 255, 255);
+        }
+
+        &:disabled {
+            cursor: not-allowed;
+            color: rgb(235, 235, 235);
+            border-color: rgb(235, 235, 235);
+            background: rgb(255, 255, 255);
+        }
+    }
+}

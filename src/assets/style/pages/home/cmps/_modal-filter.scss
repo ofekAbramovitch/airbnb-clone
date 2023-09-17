@@ -1,0 +1,75 @@
+@mixin modal-inner-padding {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.modal-filter {
+    width: 100%;
+    max-width: 780px;
+    border-radius: 12px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background: white;
+
+    .header {
+        min-height: 64px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid rgb(235, 235, 235);
+
+        button {
+            position: absolute;
+            left: 2%;
+            top: 50%;
+            transform: translateY(-50%);
+            background: transparent;
+            border: none;
+            outline: none;
+        }
+
+        h4 {
+            text-align: center;
+            font-size: 16px;
+            font-family: 'Cereal-Bold', sans-serif;
+        }
+    }
+
+    .footer {
+        @include modal-inner-padding();
+        padding-top: 16px;
+        padding-bottom: 16px;
+        min-height: 64px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .clear {
+            border-radius: 8px;
+            border-width: 1px;
+            border-style: solid;
+            transition: box-shadow 0.2s ease, transform 0.1s ease;
+            border: none;
+            background: transparent;
+            padding: 10px;
+            text-decoration: underline;
+        }
+
+        .show-homes {
+            border-radius: 8px;
+            border-width: 1px;
+            border-style: solid;
+            padding: 14px 24px;
+            transition: box-shadow 0.2s ease, transform 0.1s ease;
+            border: none;
+            background: $ui-brand-color;
+            color: white;
+        }
+    }
+}
