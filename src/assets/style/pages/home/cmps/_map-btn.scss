@@ -1,0 +1,43 @@
+.map-btn {
+    margin-bottom: 40px;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    appearance: none;
+    display: inline-flex;
+    border-radius: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    outline: none;
+    margin: 0px;
+    padding: 14px 19px;
+    color: $ui-brand-color;
+    cursor: pointer;
+    touch-action: manipulation;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+    transition: -ms-transform 0.25s ease 0s, -webkit-transform 0.25s ease 0s, transform 0.25s ease 0s;
+    background: rgb(34, 34, 34);
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(255, 255, 255);
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    display: flex;
+    font-size: 14px;
+    line-height: 18px;
+    z-index: 5;
+
+    &:hover {
+        border-color: rgba(0, 0, 0, 0.08);
+        box-shadow: 0 0 0 1px transparent, 0 0 0 4px transparent, 0 6px 16px rgba(0, 0, 0, 0.12);
+        transform: scale(1.04) translateX(-47.5%);
+    }
+
+    img {
+        width: 16px;
+        height: 16px;
+        margin-left: 8px;
+    }
+}
