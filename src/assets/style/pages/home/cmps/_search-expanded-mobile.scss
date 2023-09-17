@@ -1,0 +1,183 @@
+.search-expanded-mobile {
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    z-index: 5;
+    width: 100dvw;
+    background: #f7f7f7;
+    grid-template-rows: max-content;
+    padding-top: var(--layout-padding);
+
+    .close {
+        position: absolute;
+        top: var(--layout-padding);
+        left: 0%;
+        background: white;
+        border: 1px solid #c2c2c2;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-weight: 900;
+    }
+
+    .experiences {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        p {
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 600;
+            margin-right: 0px;
+            transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s,
+                transform 0.1s ease 0s;
+            position: relative;
+            outline: none;
+            color: rgb(34, 34, 34);
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            color: #717171;
+            padding-bottom: 5px;
+
+            &.active {
+                border-bottom: 2px solid black;
+                color: $ui-brand-color;
+            }
+        }
+    }
+
+    .tabs {
+        margin-top: 22px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: calc(100vw - calc(2 * var(--layout-padding)));
+
+        .tab {
+            width: 100%;
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 1px 2px rgb(0 0 0 / 5%), 0 4px 6px rgb(0 0 0 / 3%);
+            border: none;
+            height: 56px;
+            padding-right: 20px;
+            padding-left: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .muted {
+                color: #717171;
+            }
+        }
+    }
+
+    .footer {
+        padding-left: var(--layout-padding);
+        padding-right: var(--layout-padding);
+        background: white;
+        overflow: hidden;
+        position: absolute;
+        bottom: 0%;
+        height: 71px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #f0f0f0;
+
+        p {
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: underline;
+            color: $ui-brand-color;
+        }
+
+        button {
+            border-radius: 8px;
+            border-width: 1px;
+            border-style: solid;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            padding-left: 24px;
+            padding-right: 24px;
+            transition: box-shadow 0.2s ease, transform 0.1s ease;
+            border: none;
+            background: $brand-gradient;
+            display: flex;
+            color: white;
+            gap: 0.5rem;
+            font-family: 'Cereal-Bold', sans-serif;
+        }
+    }
+
+    .search-module {
+        position: static;
+
+        &.search-date-picker {
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &.search-guests {
+            min-width: unset;
+            padding: 1rem 1rem;
+
+            .row {
+                min-width: unset;
+            }
+        }
+
+        &.search-location {
+            padding: 2rem;
+            width: 100%;
+
+            .wrapper {
+                margin-top: 1rem;
+                width: 100%;
+                display: flex;
+                overflow-x: scroll;
+                overflow: auto;
+            }
+
+            .regions {
+                display: flex;
+
+                .region {
+                    width: 100px;
+
+                    img {
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+            }
+
+            input {
+                width: 100%;
+                -webkit-box-align: center;
+                flex: 1 1 0%;
+                overflow: hidden;
+                position: relative;
+                align-items: center;
+                display: flex;
+                margin: 0px;
+                padding: 0px 20px;
+                white-space: nowrap;
+                height: 60px;
+                border-radius: 12px;
+                border: 1px solid rgb(176, 176, 176);
+                background: rgb(255, 255, 255);
+                color: rgb(34, 34, 34);
+            }
+        }
+    }
+}
