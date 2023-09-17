@@ -1,0 +1,41 @@
+.filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.45rem;
+    cursor: pointer;
+    color: #717171;
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
+    border-bottom: 2px solid transparent;
+    box-sizing: unset;
+
+    p {
+        white-space: nowrap;
+    }
+
+    img {
+        width: 24px;
+        height: 24px;
+        opacity: 0.64;
+    }
+
+    &:hover {
+        border-bottom: 2px solid #dddddd;
+        color: black;
+
+        img {
+            opacity: 1;
+        }
+    }
+
+    &.selected {
+        border-bottom: 2px solid black;
+        color: black;
+
+        img {
+            opacity: 1;
+        }
+    }
+}
