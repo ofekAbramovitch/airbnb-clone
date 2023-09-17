@@ -1,0 +1,25 @@
+.no-stays-msg {
+    .heading {
+        font-weight: normal;
+        font-family: 'Cereal-Medium';
+        margin-bottom: 0px;
+        width: fit-content;
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 12px;
+    }
+
+    button {
+        margin-top: 38px;
+        font-size: 14px;
+        background: transparent;
+        border-radius: 8px;
+        border: 1px solid rgb(176, 176, 176);
+        padding: 12px 1rem;
+    }
+}
