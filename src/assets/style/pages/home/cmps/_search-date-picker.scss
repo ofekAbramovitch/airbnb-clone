@@ -1,0 +1,48 @@
+.search-expanded.shown .search-expanded-search .search-date-picker {
+    width: 100%;
+    height: 511px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rdrNextPrevButton,
+.rdrNextPrevButton {
+    background: transparent !important;
+}
+
+@media screen and (max-width: $mobile-size) {
+    $mobile-calendar-width: 250px;
+
+    .rdrDefinedRangesWrapper {
+        display: none;
+    }
+
+    .rdrMonthAndYearWrapper {
+        width: $mobile-calendar-width;
+    }
+
+    .rdrMonths.rdrMonthsVertical {
+        width: $mobile-calendar-width;
+
+        .rdrMonth {
+            width: $mobile-calendar-width;
+        }
+    }
+}
+
+@media screen and (min-width: $mobile-size) {
+    $mobile-calendar-width: 450px;
+
+    .rdrMonthAndYearWrapper {
+        width: $mobile-calendar-width;
+    }
+
+    .rdrMonths.rdrMonthsVertical {
+        width: $mobile-calendar-width;
+
+        .rdrMonth {
+            width: $mobile-calendar-width;
+        }
+    }
+}

@@ -60,7 +60,7 @@ export default function SearchExpandedMobile({ isSearchOpen, onToggleSearch, sea
     }
 
     return (
-        <div className="main-layout search-expanded=mobile">
+        <div className="main-layout search-expanded-mobile">
             <button className="close" onClick={onToggleSearch}>
                 <AiOutlineClose fontSize={'13px'} fontWeight={700} />
             </button>
