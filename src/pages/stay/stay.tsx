@@ -10,6 +10,9 @@ import { ISearchBy } from "../../interfaces/search-by-interface"
 
 import { setSearchBy } from "../../store/stay/stay.action"
 
+import StaySkeletonView from "./cmps/stay-skeleton-view/stay-skeleton-view"
+import Navbar from "../../cmps/navbar/navbar"
+
 export default function Stay() {
     const [stay, setStay] = useState<IStay | ISkeletonStay>(getSkeletonStayView())
     const [isReserving, setIsReserving] = useState<boolean>(false)
@@ -69,11 +72,14 @@ export default function Stay() {
         setIsReserved(true)
     }
 
-    if (stay.type === 'skeleton') return 
+    if (stay.type === 'skeleton') return <StaySkeletonView />
     return (
         <>
-            <section className="stay-layout">
-
+            <section className="stay-view-layout">
+                <Navbar />
+                <div className="heading">
+                    
+                </div>
             </section>
         </>
     )

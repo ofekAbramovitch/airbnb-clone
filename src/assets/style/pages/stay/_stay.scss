@@ -1,0 +1,33 @@
+.stay-view-layout {
+    .stay-view-seperator {
+        display: grid;
+        grid-template-columns: 1.75fr 1fr;
+        gap: 8%;
+
+        @media screen and (max-width: $mobile-size) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .border-bottom {
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    @media screen and (max-width: $mobile-size) {
+        .heading {
+            width: 100%;
+            grid-column: 1/4;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+@mixin stay-info-layout-padding {
+    padding-bottom: 32px;
+    padding-top: 32px;
+}
+
+
+@import './cmps/stay-skeleton-view'
