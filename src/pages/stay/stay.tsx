@@ -12,6 +12,7 @@ import { setSearchBy } from "../../store/stay/stay.action"
 
 import StaySkeletonView from "./cmps/stay-skeleton-view/stay-skeleton-view"
 import Navbar from "../../cmps/navbar/navbar"
+import StayHeader from "./cmps/stay-header"
 
 export default function Stay() {
     const [stay, setStay] = useState<IStay | ISkeletonStay>(getSkeletonStayView())
@@ -78,7 +79,7 @@ export default function Stay() {
             <section className="stay-view-layout">
                 <Navbar />
                 <div className="heading">
-                    
+                    <StayHeader stay={stay as IStay} />
                 </div>
             </section>
         </>
