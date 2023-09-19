@@ -1,0 +1,106 @@
+.stay-gallery {
+    height: 541px;
+    margin-bottom: 48px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+
+    img {
+        max-height: 541px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+
+        &.main-image {
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+        }
+    }
+
+    .grid {
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+
+        img {
+            &:nth-of-type(2) {
+                border-top-right-radius: 12px;
+            }
+
+            &:nth-of-type(4) {
+                border-bottom-right-radius: 12px;
+            }
+        }
+    }
+
+    @media screen and (max-width: $mobile-size) {
+        margin-top: 14px;
+        order: -1;
+        margin-bottom: 0;
+        display: block;
+
+        img {
+            border-radius: 0px !important;
+        }
+
+        .grid {
+            display: none;
+        }
+    }
+}
+
+.gallery-mobile-navbar {
+    -webkit-box-pack: justify;
+    -webkit-box-flex: 0;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    flex: 0 0 60px;
+    justify-content: space-between;
+    padding: 0px 24px;
+    position: fixed;
+    background-color: white;
+    z-index: 5;
+    width: 100%;
+    text-align: left;
+    top: 0px;
+    height: 60px;
+
+    button {
+        background: transparent;
+        border: none;
+    }
+}
+
+.stay-gallery-expanded {
+    background: white;
+    z-index: 5;
+    position: fixed;
+    top: 60px;
+    height: 100%;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+
+        &:nth-child(3n + 1) {
+            grid-column: 1/4;
+            padding-bottom: 8px;
+        }
+
+        &:nth-child(3n + 2) {
+            padding-right: 4px;
+            padding-bottom: 8px;
+        }
+
+        &:nth-child(3n) {
+            padding-left: 4px;
+            padding-bottom: 8px;
+        }
+    }
+}

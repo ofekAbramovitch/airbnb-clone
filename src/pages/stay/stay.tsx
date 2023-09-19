@@ -13,6 +13,7 @@ import { setSearchBy } from "../../store/stay/stay.action"
 import StaySkeletonView from "./cmps/stay-skeleton-view/stay-skeleton-view"
 import Navbar from "../../cmps/navbar/navbar"
 import StayHeader from "./cmps/stay-header"
+import StayGallery from "./cmps/stay-gallery"
 
 export default function Stay() {
     const [stay, setStay] = useState<IStay | ISkeletonStay>(getSkeletonStayView())
@@ -63,7 +64,7 @@ export default function Stay() {
             return
         }
         setIsReserving(true)
-            ; (stay as IStay).takenDates.push(...stayService.getDatesArray(searchBy.checkIn, searchBy.checkOut))
+            ;(stay as IStay).takenDates.push(...stayService.getDatesArray(searchBy.checkIn, searchBy.checkOut))
         try {
             await stayService.saveStay(stay as IStay)
         } catch (err) {
@@ -80,6 +81,7 @@ export default function Stay() {
                 <Navbar />
                 <div className="heading">
                     <StayHeader stay={stay as IStay} />
+                    <StayGallery stay={stay as IStay} />
                 </div>
             </section>
         </>
