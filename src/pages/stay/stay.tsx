@@ -83,6 +83,9 @@ export default function Stay() {
                     <StayHeader stay={stay as IStay} />
                     <StayGallery stay={stay as IStay} />
                 </div>
+                <div className="stay-view-seperator">
+                    
+                </div>
             </section>
         </>
     )
