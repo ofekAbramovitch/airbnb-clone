@@ -1,0 +1,21 @@
+.stay-info-air-cover {
+    @include stay-info-layout-padding();
+
+    img {
+        height: 26px;
+        margin-bottom: 26px;
+    }
+
+    p {
+        margin-bottom: 1rem;
+        font-size: 16px;
+        line-height: 20px;
+
+        &.link {
+            color: $ui-brand-color;
+            font-family: 'Cereal-Medium', sans-serif;
+            text-decoration: underline;
+            margin-bottom: 0;
+        }
+    }
+}

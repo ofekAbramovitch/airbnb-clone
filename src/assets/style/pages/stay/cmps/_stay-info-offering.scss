@@ -1,0 +1,41 @@
+.stay-info-offering {
+    @include stay-info-layout-padding();
+
+    h3 {
+        color: $ui-brand-color;
+        font-family: 'Cereal-Medium';
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 24px;
+    }
+
+    .offerings {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px 50px;
+
+        @media screen and (max-width: $tablet-size) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    button {
+        margin-top: 24px;
+        border-radius: 8px;
+        border: 1px solid $ui-brand-color;
+        transition: box-shadow 0.2s ease, transform 0.1s ease;
+        background: white;
+        padding: 13px 23px;
+        font-family: 'Cereal-Medium';
+
+        @media screen and (max-width: $mobile-size) {
+            width: 100%;
+        }
+
+        &:hover {
+            border-color: black;
+            background: #f7f7f7;
+        }
+    }
+}

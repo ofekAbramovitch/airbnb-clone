@@ -1,0 +1,66 @@
+.stay-info-calendar {
+    @include stay-info-layout-padding();
+
+    .rdrCalendarWrapper.rdrDateRangeWrapper {
+        width: 400px !important;
+    }
+
+    .rdrMonthAndYearWrapper {
+        width: 400px !important;
+    }
+
+    .rdrMonths.rdrMonthsVertical {
+        width: 400px !important;
+    }
+
+    .rdrMonth {
+        width: 400px !important;
+    }
+
+    @media screen and (max-width: 1000px) {
+        $mobile-calendar-width: 250px;
+
+        .rdrCalendarWrapper.rdrDateRangeWrapper {
+            width: $mobile-calendar-width !important;
+        }
+
+        .rdrDefinedRangesWrapper {
+            display: none;
+        }
+
+        .rdrMonthAndYearWrapper {
+            width: $mobile-calendar-width !important;
+        }
+
+        .rdrMonths.rdrMonthsVertical {
+            width: $mobile-calendar-width !important;
+
+            .rdrMonth {
+                width: $mobile-calendar-width !important;
+            }
+        }
+    }
+
+    @media screen and (min-width: 1000px) {
+        $mobile-calendar-width: 450px;
+
+        .rdrMonthAndYearWrapper {
+            width: $mobile-calendar-width;
+        }
+
+        .rdrMonths.rdrMonthsVertical {
+            width: $mobile-calendar-width;
+
+            .rdrMonth {
+                width: $mobile-calendar-width;
+            }
+        }
+    }
+
+    @media screen and (max-width: $mobile-size) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
