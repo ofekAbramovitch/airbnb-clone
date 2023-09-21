@@ -31,8 +31,7 @@ To run the project locally, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/ofekAbramovitch/airbnb-clone`
 2. Install dependencies: `npm install`
-3. Start the backend server: `npm run server`
-4. Start the frontend server: `npm start`
+3. Start the frontend server: `npm start`
 
 The website should be available at `http://localhost:3000/`.
 
