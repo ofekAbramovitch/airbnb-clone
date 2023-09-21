@@ -17,6 +17,7 @@ import StayGallery from "./cmps/stay-gallery"
 import StayInfo from "./cmps/stay-info/stay-info"
 import StayReserve from "./cmps/stay-reserve"
 import StayReviews from "./cmps/stay-reviews"
+import StayMap from "./cmps/stay-map"
 
 export default function Stay() {
     const [stay, setStay] = useState<IStay | ISkeletonStay>(getSkeletonStayView())
@@ -97,6 +98,7 @@ export default function Stay() {
                     />
                 </div>
                 <StayReviews stay={stay as IStay} />
+                <StayMap stay={stay as IStay} />
             </section>
         </>
     )

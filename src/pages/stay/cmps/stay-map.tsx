@@ -7,7 +7,7 @@ interface Props {
 }
 
 const AnyReactCmp = ({ txt }: any) => (
-    <div className="map-mmarker">
+    <div className="map-marker">
         <div className="circle">
             <MdHome />
         </div>
@@ -17,8 +17,8 @@ const AnyReactCmp = ({ txt }: any) => (
 export default function StayMap({ stay }: Props) {
     const props = {
         center: {
-            lat: stay.loc.lat,
-            lng: stay.loc.lng
+            lat: stay.loc.lng,
+            lng: stay.loc.lat
         },
         zoom: 14
     }

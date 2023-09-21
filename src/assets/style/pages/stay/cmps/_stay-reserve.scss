@@ -220,10 +220,10 @@
 
     .reserve-btn {
         border-radius: 8px;
-        border: 1px solid none;
+        border: none;
         padding: 14px 24px;
         transition: box-shadow 0.2s ease, transform 0.1s ease;
-        background: $ui-brand-color;
+        background: $brand-gradient;
         color: white;
         font-family: 'Cereal-Medium';
         width: 100%;

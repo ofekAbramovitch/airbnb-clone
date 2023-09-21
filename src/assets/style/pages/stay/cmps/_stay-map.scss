@@ -1,0 +1,56 @@
+.stay-map {
+    @include stay-info-layout-padding();
+
+    .map {
+        height: 480px;
+    }
+
+    h3 {
+        color: $ui-brand-color;
+        font-family: 'Cereal-Medium';
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 24px;
+    }
+
+    .about {
+        margin-top: 24px;
+
+        h5 {
+            color: $ui-brand-color;
+            font-family: 'Cereal-Medium';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            min-height: 20px;
+            margin-bottom: 16px;
+        }
+
+        p {
+            line-height: 24px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+    }
+
+    .map-marker {
+        .circle {
+            position: relative;
+            z-index: 6;
+            width: 48px;
+            height: 48px;
+            font-size: 2rem;
+            color: white;
+            background: $brand-color;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: rgba(17, 17, 26, 0.4) 0px 0px 16px;
+        }
+    }
+}
