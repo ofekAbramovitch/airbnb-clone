@@ -15,6 +15,7 @@ import Navbar from "../../cmps/navbar/navbar"
 import StayHeader from "./cmps/stay-header"
 import StayGallery from "./cmps/stay-gallery"
 import StayInfo from "./cmps/stay-info/stay-info"
+import StayReserve from "./cmps/stay-reserve"
 
 export default function Stay() {
     const [stay, setStay] = useState<IStay | ISkeletonStay>(getSkeletonStayView())
@@ -86,7 +87,15 @@ export default function Stay() {
                 </div>
                 <div className="stay-view-seperator">
                     <StayInfo stay={stay as IStay} />
+                    <StayReserve stay={stay as IStay}
+                        searchBy={searchBy}
+                        onReserve={onReserve}
+                        isReserving={isReserving}
+                        isDatesTaken={isDatesTaken}
+                        setIsDatesTaken={setIsDatesTaken}
+                    />
                 </div>
+                
             </section>
         </>
     )
