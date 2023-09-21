@@ -1,7 +1,7 @@
 # Airbnb Clone
 
-[![Airbnb image](https://res.cloudinary.com/ofekabramovitch/image/upload/v1695319457/dyvlpg96thliszru1sl4.jpg)]
-(https://my-react-airbnb-clone.netlify.app/)
+[!Airbnb image(https://res.cloudinary.com/ofekabramovitch/image/upload/v1695319457/dyvlpg96thliszru1sl4.jpg)]
+https://my-react-airbnb-clone.netlify.app/
 
 Check it out here: [https://my-react-airbnb-clone.netlify.app/](https://my-react-airbnb-clone.netlify.app/)
 
