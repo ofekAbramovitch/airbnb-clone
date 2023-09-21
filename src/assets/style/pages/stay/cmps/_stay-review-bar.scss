@@ -1,0 +1,42 @@
+.stay-review-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8%;
+    padding-right: 8%;
+
+    .bar-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        width: 50%;
+
+        .bar {
+            position: relative;
+            height: 4px;
+            width: 100%;
+            margin-right: 4px;
+            background: rgb(221, 221, 221);
+            border-radius: 2px;
+
+            .bar-complete {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                background: rgb(34, 34, 34);
+                border-radius: 2px;
+                width: 0%;
+            }
+        }
+
+        .rating {
+            font-family: 'Cereal-Medium';
+            color: $ui-brand-color;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            margin-left: 6px;
+        }
+    }
+}
