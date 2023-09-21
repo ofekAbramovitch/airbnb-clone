@@ -1,46 +1,41 @@
-# Getting Started with Create React App
+# Airbnb Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Airbnb image](https://res.cloudinary.com/ofekabramovitch/image/upload/v1695319457/dyvlpg96thliszru1sl4.jpg)]
+(https://my-react-airbnb-clone.netlify.app/)
 
-## Available Scripts
+Check it out here: [https://my-react-airbnb-clone.netlify.app/](https://my-react-airbnb-clone.netlify.app/)
 
-In the project directory, you can run:
+This project is an Airbnb clone, where users can search for and book rental properties.
 
-### `npm start`
+## Project Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+-   **Search:** Users can search for rental properties based on location and dates. The search feature provides a list of matching properties along with filters to narrow down the results based on preferences.
+-   **Property Details:** Users can view detailed information about each property, including photos, descriptions, reviews, and availability calendar.
+-   **Booking:** Users can book rental properties directly through the website by selecting available dates and submitting payment information. The website then sends a confirmation email to the user and the property owner.
+-   **Map Chooser:** Users can choose the location of the rental property on a map when looking for a property.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+This project was built using the following technologies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   **Frontend:** Typescript, React, Redux, React Router, React Dates Range, SASS
 
-### `npm run build`
+## Demo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To see a live demo of the project, please visit [https://my-react-airbnb-clone.netlify.app/](https://my-react-airbnb-clone.netlify.app/). You can try out the search and booking features with sample properties.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Screenshots
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation
 
-### `npm run eject`
+To run the project locally, follow these steps:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Clone the repository: `git clone https://github.com/ofekAbramovitch/airbnb-clone`
+2. Install dependencies: `npm install`
+3. Start the frontend server: `npm start`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The website should be available at `http://localhost:3000/`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Contact
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+If you have any questions or feedback about the project, please feel free to reach out at **ofek301156@gmail.com**.
