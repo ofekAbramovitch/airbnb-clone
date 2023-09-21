@@ -19,6 +19,7 @@ import StayReserve from "./cmps/stay-reserve"
 import StayReviews from "./cmps/stay-reviews"
 import StayMap from "./cmps/stay-map"
 import StayHost from "./cmps/stay-host"
+import StayThingsToKnow from "./cmps/stay-things-to-know"
 
 export default function Stay() {
     const [stay, setStay] = useState<IStay | ISkeletonStay>(getSkeletonStayView())
@@ -101,6 +102,7 @@ export default function Stay() {
                 <StayReviews stay={stay as IStay} />
                 <StayMap stay={stay as IStay} />
                 <StayHost stay={stay as IStay} />
+                <StayThingsToKnow />
             </section>
         </>
     )
