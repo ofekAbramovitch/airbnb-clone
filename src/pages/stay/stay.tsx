@@ -16,6 +16,7 @@ import StayHeader from "./cmps/stay-header"
 import StayGallery from "./cmps/stay-gallery"
 import StayInfo from "./cmps/stay-info/stay-info"
 import StayReserve from "./cmps/stay-reserve"
+import StayReviews from "./cmps/stay-reviews"
 
 export default function Stay() {
     const [stay, setStay] = useState<IStay | ISkeletonStay>(getSkeletonStayView())
@@ -95,7 +96,7 @@ export default function Stay() {
                         setIsDatesTaken={setIsDatesTaken}
                     />
                 </div>
-                
+                <StayReviews stay={stay as IStay} />
             </section>
         </>
     )
