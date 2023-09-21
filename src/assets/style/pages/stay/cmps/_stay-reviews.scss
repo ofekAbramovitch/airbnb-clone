@@ -1,0 +1,49 @@
+.stay-reviews {
+    @include stay-info-layout-padding();
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-top: 1px solid #e5e5e5;
+
+    h3 {
+        color: $ui-brand-color;
+        font-family: 'Cereal-Medium';
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 26px;
+        display: flex;
+        gap: 0.4rem;
+        align-items: center;
+        margin-bottom: 32px;
+    }
+
+    .review-bars {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 24px;
+        gap: 16px 0;
+
+        @media screen and (max-width: $mobile-size) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    .reviews {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        @media screen and (max-width: $tablet-size) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .show-more {
+            margin-top: 24px;
+            border-radius: 8px;
+            border: 1px solid #222222;
+            transition: box-shadow 0.2s ease, transform 0.1s ease;
+            background: white;
+            padding:  13px 23px;
+            font-family: 'Cereal-Medium';
+        }
+    }
+}
