@@ -13,7 +13,7 @@ export default function ReservationComplete({ stay, isReserved, setIsReserved }:
         <>
             <div className={`strong-dark-overlay ${isReserved ? 'shown' : ''}`}></div>
             <div className={`reservation-complete ${isReserved ? 'shown' : ''}`}>
-                <img src={miniLogo} alt="logo" />
+                <img src={miniLogo} alt="" className="logo-img" />
                 <h1>It's vacation time!</h1>
                 <p className="sub-heading">You're going to {stay.loc.city}!</p>
                 <img src={stay.imgUrls[0]} alt="" className="stay-img" />
@@ -22,7 +22,7 @@ export default function ReservationComplete({ stay, isReserved, setIsReserved }:
                     Thank you for choosing to stay with us! We hope you have a wonderful time in our Airbnb clone. Your
                     purchase has been confirmed and we look forward to hosting you soon.
                 </p>
-                <button onClick={() => setIsReserved(false)}>close</button>
+                <button onClick={() => setIsReserved(false)}>Close</button>
             </div>
         </>
     )
